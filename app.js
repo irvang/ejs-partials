@@ -32,7 +32,7 @@ app.get('/two', async (req, res) => {
 
   let body = await fetchResponse.json();
 
-  console.log(body)
+  // console.log(body)
   res.render('index', { data: body });
 });
 
