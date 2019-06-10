@@ -13,7 +13,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 // Routes
-app.get('/two', (req, res) => {
+app.get('/', (req, res) => {
 
   fetch('https://gist.githubusercontent.com/irvang/0184e891e958e4fbf498b8e9432c378e/raw/f39f3514541d402be03ce1932f330ff150aa3675/test-fetch.json')
     .then(fetchResponse => {
@@ -26,7 +26,7 @@ app.get('/two', (req, res) => {
     });
 });
 
-app.get('/', async (req, res) => {
+app.get('/two', async (req, res) => {
 
   let fetchResponse = await fetch('https://gist.githubusercontent.com/irvang/0184e891e958e4fbf498b8e9432c378e/raw/f39f3514541d402be03ce1932f330ff150aa3675/test-fetch.json')
 
