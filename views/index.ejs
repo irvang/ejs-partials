@@ -6,14 +6,14 @@
 
 <br>
 
-<table class="table">
+<table class="table container">
   <%- include('./partials/table-head.ejs'); %>
 
   <tbody>
 
-    <%  for (let i =0 ; i < data.length; i++) { %>
-      <%- include('./partials/table-body.ejs', { user: data[i], index: i}); %>
-    <% } %>
+    <% data.forEach(function (user, idx) { %>
+        <%- include('./partials/table-body.ejs', { user: user, index: idx}); %>
+    <%      }); %>
   </tbody>
 
 </table>
