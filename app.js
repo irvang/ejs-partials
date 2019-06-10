@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 // Routes
 app.get('/', (req, res) => {
 
-  fetch('https://gist.githubusercontent.com/irvang/0184e891e958e4fbf498b8e9432c378e/raw/f39f3514541d402be03ce1932f330ff150aa3675/test-fetch.json')
+  fetch('https://gist.githubusercontent.com/irvang/0184e891e958e4fbf498b8e9432c378e/raw/21f513c369ffcb7e0f3b202de41da4d48d8ae5e9/test-fetch.json')
     .then(fetchResponse => {
       return fetchResponse.json()
     })
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 
 app.get('/two', async (req, res) => {
 
-  let fetchResponse = await fetch('https://gist.githubusercontent.com/irvang/0184e891e958e4fbf498b8e9432c378e/raw/f39f3514541d402be03ce1932f330ff150aa3675/test-fetch.json')
+  let fetchResponse = await fetch('https://gist.githubusercontent.com/irvang/0184e891e958e4fbf498b8e9432c378e/raw/21f513c369ffcb7e0f3b202de41da4d48d8ae5e9/test-fetch.json')
 
   let body = await fetchResponse.json();
 

@@ -1,6 +1,24 @@
+<!-- Header -->
 <%- include("./partials/header.ejs") %>
 
+<!-- Navbar -->
+<%- include('./partials/navbar.ejs'); %>
+
+<br>
+
+<table class="table">
+  <%- include('./partials/table-head.ejs'); %>
+
+  <tbody>
+
+    <%  for (let i =0 ; i < data.length; i++) { %>
+      <%- include('./partials/table-body.ejs', { user: data[i], index: i}); %>
+    <% } %>
+  </tbody>
+
+</table>
 
 
 
+<!-- Footer -->
 <%- include("./partials/footer.ejs") %>
